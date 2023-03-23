@@ -1,0 +1,22 @@
+{
+    "preset": "ts-jest/presets/default-esm",
+    "testEnvironment": "node",
+    "resolver": "ts-jest-resolver",
+    "modulePathIgnorePatterns": [
+        "./dist",
+        ".types"
+    ],
+    "testMatch": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[tj]s?(x)"
+    ],
+    "transform": {
+        "^.+\\.tsx?$": [
+            "ts-jest",
+            {
+                "tsconfig": "./tsconfig.json",
+                "useESM": true
+            }
+        ]
+    }
+}
